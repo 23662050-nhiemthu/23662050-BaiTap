@@ -4,54 +4,71 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <html>
-      <header>
-        <link rel="stylesheet" href="assets/css/layout.css" />
+    <>
+      <header className="header">
+        {/* Thanh đầu gồm menu trái, logo, tìm kiếm */}
+        <div className="banner">
+          {/* Menu trái */}
+          <nav className="menu-left">
+            <ul>
+              <li>
+                <a href="/">TRANG CHỦ</a>
+              </li>
+              <li>
+                <a href="/trang1">EGOV</a>
+              </li>
+              <li>
+                <a href="/trang2">SINH VIÊN</a>
+              </li>
+            </ul>
+          </nav>
 
-        <div id="header" className="header">
-          <div id="banner" className="banner">
-            <div id="divmenutrai">
-              <nav id="menutrai">
-                <ul className="menutrai" style={{ width: "600px" }}>
-                  <li>
-                    <a href="/" class="menutrai">
-                      TRANG CHỦ
-                    </a>
-                  </li>
-                  <li>
-                    <a class="menutrai" href="/trang1">
-                      {" "}
-                      EGOV
-                    </a>
-                  </li>
-                  <li>
-                    <a class="menutrai" href="/trang2">
-                      SINH VIÊN
-                    </a>
-                  </li>
-                  <li>
-                    <a class="menutrai" href="/Listsanpham">
-                      SẢN PHẨM
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </div>
-            <div style={{ width: "1000px" }}>
-              <a href="/">
-                <img src={logo} width="500" height="80" />
-              </a>
-            </div>
-            <div>Tim kiem</div>
+          {/* Logo giữa */}
+          <div className="logo">
+            <a href="/">
+              <img src={logo} alt="logo" />
+            </a>
           </div>
-          <div id="menubar" className="menubar"></div>
+
+          {/* Ô tìm kiếm bên phải */}
+          <div className="search-box">
+            <input type="text" placeholder="Tìm kiếm..." />
+            <button>Tìm</button>
+          </div>
+        </div>
+
+        {/* Thanh menu đỏ bên dưới */}
+        <div className="menu-bar">
+          <ul>
+            <li>
+              <a href="#">GIỚI THIỆU</a>
+            </li>
+            <li>
+              <a href="#">TIN TỨC - SỰ KIỆN</a>
+            </li>
+            <li>
+              <a href="#">TUYỂN SINH</a>
+            </li>
+            <li>
+              <a href="#">CÔNG KHAI GIÁO DỤC</a>
+            </li>
+            <li>
+              <a href="#">CƠ CẤU TỔ CHỨC</a>
+            </li>
+            <li>
+              <a href="#">LIÊN KẾT</a>
+            </li>
+          </ul>
         </div>
       </header>
-      <body>
+
+      <main>
         <Outlet />
-      </body>
+      </main>
+
       <footer></footer>
-    </html>
+    </>
   );
 };
+
 export default Layout;

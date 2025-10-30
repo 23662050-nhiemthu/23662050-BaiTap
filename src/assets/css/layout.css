@@ -1,66 +1,98 @@
-body {
+/* Đặt reset cơ bản */
+* {
   margin: 0;
-}
-
-.banner {
-  height: 126px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .header {
+  width: 100%;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Thanh banner trên cùng */
+.banner {
   display: flex;
-  flex-direction: column;
-  height: 180px;
-  background-color: #fff;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  height: 100px;
+  padding: 0 30px;
 }
-.menutrai {
+
+/* Menu trái */
+.menu-left ul {
+  list-style: none;
   display: flex;
-  flex-direction: row;
-  width: 270px;
+  gap: 20px;
 }
 
-.menubar {
-  background-color: #b22d30;
-  height: 52px;
-}
-
-#menutrai {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 13px;
-}
-
-#menutrai ul {
-  margin-right: 10px;
-}
-
-#menutrai ul li {
-  list-style-type: none;
-  margin-left: 10px;
-  max-width: 80px;
-}
-
-a.menutrai:link,
-a.menutrai:visited {
-  color: #b22d30;
-  font-family: "Times New Roman", Times, serif;
+.menu-left a {
   text-decoration: none;
+  color: purple;
+  font-weight: 600;
+  font-size: 14px;
 }
 
-a.menutrai:visited {
-  font-weight: 700;
+.menu-left a:hover {
+  text-decoration: underline;
 }
 
-a.menutrai:hover {
-  color: #5426d1;
-  font-family: "Times New Roman", Times, serif;
+/* Logo giữa */
+.logo img {
+  height: 80px;
+  width: auto;
 }
 
-a.menutrai:active {
-  color: #190c3f;
-  font-family: "Times New Roman", Times, serif;
+/* Ô tìm kiếm bên phải */
+.search-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.search-box input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-box button {
+  background-color: #a6231b;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #d13627;
+}
+
+/* Thanh menu đỏ bên dưới */
+.menu-bar {
+  background-color: #a6231b;
+  text-align: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-bar ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+.menu-bar a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-bar a:hover {
+  text-decoration: underline;
 }
